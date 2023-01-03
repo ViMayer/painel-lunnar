@@ -1,0 +1,42 @@
+============ O que aprendi ==================
+• Experiência prática geral adquirida com a criação do projeto
+• Aprofundamento no funcionamento do FaunaDB
+• Utilização da AP de leitura de documentos do google sheets
+• Otimização de iteração para salvamento de dados 
+• Utilização da biblioteca Formik para manipulação de formulários
+
+============ Desafios superados =============
+• Configurações de acesso de segurança da aplicação pelo Next
+• Criação de build de produção com typescript
+• Adversidades originadas pelo envio da aplicação a plataforma Vercel
+• Problemas diversos de conexão com o domínio do FaunaDB
+
+
+============ O que vou usar =================
+
+• Biblioteca Formik do React
+• Experiência de requisição de rotas
+• Conhecimento adquirido com as funcionalidades do FaunaDB
+• API Sheets do Google 
+
+=============================================
+              !! ANOTACOES !!
+=============================================
+
+CRIAR COM HTTP NOVO/MUDAR LOCALHOST:3000 EM GITHUB -> 
+DEVELOPER SETTINGS -> O AUTH APPS
+
+
+CONST DADOS -> shopOwerSlug declarado ao inves de shopOwnerSlug (erro de digitação)
+
+Removido CORS em next config
+
+  
+" nextConfig: typescript: { ignoreBuildErrors: true }" ->
+TypeScript nao deixa criar build caso alguma tipagem nao esteja correta, esta verificacao foi desabilitada
+para possibilitar desenvolvimento mais rapido
+
+Ao criar qualquer campo novo no FaunaDB que ja foi declarado alguma vez antes ( e que foi excluido por exemplo), 
+deve-se esperar no MINIMO 1 minuto pois o Fauna salva seus valores em cache e nao deixara criar antes desta marca
+de 1 minuto
+

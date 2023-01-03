@@ -1,0 +1,238 @@
+.container {
+  h2,
+  h3,
+  a,
+  p,
+  button,
+  input,
+  option,
+  select {
+    font-family: "Sora", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  a {
+    font-size: 1.6rem;
+  }
+
+  input,
+  button {
+    font-size: 1.8rem;
+  }
+  option,
+  select {
+    font-size: 1.4rem;
+  }
+  //.container {
+  background-color: #dedee7;
+  padding: 10rem 0;
+  .title,
+  .top,
+  .bottom {
+    width: 100%;
+    max-width: 135rem;
+    margin: 0 auto;
+    background-color: #b6b6bb;
+    border: 1px solid black;
+    border-bottom: none;
+  }
+  .bottom {
+    border: 1px solid black;
+  }
+
+  .title {
+    padding-left: 5rem;
+    h2 {
+      height: 8rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .top {
+    background-color: rgb(0, 100, 128);
+    display: flex;
+    justify-content: space-between;
+
+    .newUserBtn {
+      background-color: #98ffaa;
+      button {
+        width: 30rem;
+        height: 5rem;
+        background-color: #3ad054;
+        padding: 1rem;
+        color: #ffffff;
+      }
+    }
+    .newUserFormInactive,
+    .newUserFormActive {
+      z-index: 4;
+      position: fixed;
+
+      backdrop-filter: brightness(60%);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      .holder {
+        background-color: #3ad054;
+        height: 35rem;
+        width: 50rem;
+        margin: 0 auto;
+        margin-top: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        transition: all 1s;
+        gap: 1rem;
+
+        .closeBtn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          button {
+            width: 5rem;
+            height: 5rem;
+            background-color: white;
+          }
+        }
+        .input,
+        .select {
+          background-color: yellow;
+          width: 100%;
+          max-width: 40rem;
+          margin: 0 auto;
+          h3,
+          input {
+            width: 100%;
+            padding-left: 1rem;
+          }
+          h3 {
+            background-color: red;
+          }
+          input {
+            height: 3rem;
+          }
+        }
+        .select {
+          display: flex;
+          h3 {
+            text-align: left;
+            width: 15rem;
+          }
+          select {
+            width: 11rem;
+            cursor: pointer;
+          }
+        }
+        .cadastrarBtn {
+          background-color: rgb(43, 255, 0);
+          height: 5rem;
+          width: 100%;
+          max-width: 40rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+    .newUserFormActive {
+      .holder {
+        @keyframes activate {
+          from {
+            opacity: 0;
+            padding-left: 10rem;
+          }
+          to {
+            opacity: 1;
+            padding-left: 0;
+          }
+        }
+        padding-left: 0;
+
+        animation-name: activate;
+        animation-duration: 0.2s;
+        opacity: 1;
+        transition: all 0.3s;
+        animation-timing-function: ease-in-out;
+      }
+    }
+    .newUserFormInactive {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+  .bottom {
+    background-color: #e3e3e6;
+    .formulario {
+      .holder {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        .formHead {
+          margin-left: -1px;
+
+          display: flex;
+          padding-left: 5rem;
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 5rem;
+            width: 30rem;
+            background-color: #bdbdc0;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            &:last-child {
+              border-right: 1px solid black;
+            }
+          }
+        }
+        .searchResults {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .carregarMaisOff,
+        .carregarMaisOn {
+          height: 5rem;
+          display: flex;
+          margin-left: 4.9rem;
+          button {
+            width: 30.04rem;
+            border-left: 1px solid black;
+            color: white;
+            transition: opacity 0.3s;
+            background-color: rgb(40, 37, 37);
+            &:last-child {
+              border-right: 1px solid black;
+            }
+          }
+        }
+        .carregarMaisOn {
+          button {
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+        .carregarMaisOff {
+          filter: brightness(90%);
+          button {
+            color: rgb(135, 135, 135);
+          }
+        }
+      }
+    }
+  }
+}

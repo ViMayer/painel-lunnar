@@ -1,0 +1,50 @@
+.container,
+.containerLogged,
+.containerStatus,
+.containerAdmin {
+  background-color: #121516;
+  display: flex;
+  height: 7rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5rem;
+  transition: border 0.5s;
+  a {
+    display: flex;
+    align-items: center;
+    h1 {
+      transition: color 0.1s;
+      font-size: 4rem;
+      color: #ffffff;
+    }
+    &:hover {
+      h1 {
+        color: #cbcbcb;
+      }
+    }
+  }
+}
+.container {
+  border-bottom: 0.6rem solid #d3be04;
+  svg {
+    color: #d3be04;
+  }
+}
+.containerLogged {
+  border-bottom: 0.6rem solid #0ce04c;
+  svg {
+    color: #0ce04c;
+  }
+}
+.containerStatus {
+  border-bottom: 0.6rem solid #0cb6e0;
+  svg {
+    color: #0cb6e0;
+  }
+}
+.containerAdmin {
+  border-bottom: 0.6rem solid #ad49f0;
+  svg {
+    color: #ad49f0;
+  }
+}
