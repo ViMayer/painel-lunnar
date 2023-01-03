@@ -12,6 +12,7 @@ import { AcessoNegado } from "../../Components/AcessoNegado";
 
 export default function Users() {
   // MANAGE SESSION
+  const [allowedResponse, setAllowedResponse] = useState(false);
   const [admin, setAdmin] = useState();
   const [access, setAccess] = useState(false);
   const [quantia, setQuantia] = useState(2);
@@ -31,6 +32,9 @@ export default function Users() {
         //email: "victor@lunnar.team",
         email: status.data.user.email,
       });
+      console.log("access");
+      console.log(access.data);
+      setAllowedResponse(access.data);
       setAdmin(access.data.admin);
       setAccess(access.data.status);
       return access;
@@ -237,7 +241,10 @@ export default function Users() {
   if (status.status == "unauthenticated") {
     return <AcessoNegado sessao={"unauthenticated"} />;
   }
-  if (status.status == "loading" || (admin != true && admin != false)) {
+  if (
+    status.status == "loading" ||
+    (admin != true && admin != false && allowedResponse != false)
+  ) {
     return (
       <Fragment>
         <h1>CARREGANDO...</h1>
@@ -402,7 +409,8 @@ export default function Users() {
       </div>
     );
   }
-  if (admin == false) {
+
+  if (admin != true) {
     return <AcessoNegado />;
   }
   return <h1>ERRO</h1>;
