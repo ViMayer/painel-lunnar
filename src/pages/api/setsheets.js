@@ -8,6 +8,8 @@ import {
 } from './connection'
 
 export default async function Sheets(req, res) {
+    console.log(process.env.TESTE_KEY)
+  console.log("process.env.TESTE_KEY")
   const idPrania = '1rrd1uzxQxqElefzs64U03AVvTzUW0kwHp83Tkz0EX54'
 
   const doc = new GoogleSpreadsheet(idPrania)
