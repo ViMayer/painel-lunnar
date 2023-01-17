@@ -16,10 +16,12 @@ export default async function Sheets(req, res) {
 
   await doc.useServiceAccountAuth({
     client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    private_key: process.env.PRIVATE_KEY,
+    private_key: process.env.TESTE_KEY,
   })
 
   await doc.loadInfo()
+  res.json({teste:"teste"})
+  return res
   const sheet = doc.sheetsByIndex[0]
   const rows = await sheet.getRows()
 
