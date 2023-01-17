@@ -1,12 +1,16 @@
 import { getAllowed, getAdmin } from './getallowed'
 
 export default async function isAllowed(req, res) {
-  const teste = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL
-  console.log(teste)
-  console.log("teste")
-    const teste2 = process.env.TESTE_KEY
+     const teste2 = process.env.TESTE_KEY2
   console.log(teste2)
   console.log("teste2")
+  const teste = process.env.SHEET_KEY
+  console.log(teste)
+  console.log("SHEET_KEY")
+    const teste = process.env.TESTE_KEY
+  console.log(teste)
+  console.log("teste")
+
   try {
     const response = await getAllowed(req.body.email, res)
     // console.log('respostaALLOWED')
