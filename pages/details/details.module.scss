@@ -1,0 +1,71 @@
+.container {
+  border: 1px solid black;
+  border-bottom: none;
+  margin: 2rem 0 0 5rem;
+  width: 100rem;
+  p,
+  h3 {
+    color: black;
+    font-size: 2rem;
+  }
+  .title {
+    background-color: rgb(222, 222, 226);
+
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  .holder {
+    background-color: red;
+    display: flex;
+
+    .left,
+    .right {
+      // box-sizing: border-box;
+      display: flex;
+      width: 25rem;
+      li {
+        background-color: rgb(206, 206, 214);
+
+        h3,
+        p {
+          border-bottom: 1px solid black;
+        }
+      }
+      li:nth-child(odd) {
+        background-color: rgb(227, 227, 230);
+      }
+      li:nth-child(even) {
+        background-color: rgb(214, 214, 214);
+      }
+    }
+    .left {
+      background-color: purple;
+      width: 100%;
+      max-width: 22rem;
+      text-align: left;
+      .titles {
+        background-color: yellow;
+        width: 100%;
+        h3 {
+          border-right: 1px solid black;
+          padding: 0.5rem 0;
+          padding-left: 1rem;
+        }
+      }
+    }
+    .right {
+      background-color: pink;
+      width: 100%;
+      .paragraphs {
+        width: 100%;
+        p {
+          padding: 0.5rem 0;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}
